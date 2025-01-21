@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Perhitungan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hasil Perhitungan Distribusi Poisson</h1>
+        <p><strong>Rata-rata (λ):</strong> {{ lambda_mean }}</p>
+        <p><strong>Jumlah Penonton (k):</strong> {{ k }}</p>
+        <p><strong>Probabilitas tepat {{ k }} penonton:</strong> {{ prob_exact }}</p>
+        <p><strong>Probabilitas kurang dari {{ k }} penonton:</strong> {{ prob_less }}</p>
+        <p><strong>Probabilitas lebih dari {{ k }} penonton:</strong> {{ prob_more }}</p>
+        <a href="/">Kembali ke halaman utama</a>
+    </div>
+</body>
+</html>
